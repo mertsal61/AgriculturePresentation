@@ -9,8 +9,8 @@ namespace AgriculturePresentation.Controllers
         ServiceManager serviceManager = new ServiceManager(new EfServiceDal());
         public IActionResult Index()
         {
-            
-            return View();
+            var values = serviceManager.GetAll();
+            return View(values);
         }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig_first1 : Migration
+    public partial class mig_1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,11 +15,11 @@ namespace DataAccessLayer.Migrations
                 {
                     AdressID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Description1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description3 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description4 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MapInfo = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Description1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description3 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description4 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MapInfo = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -32,10 +32,10 @@ namespace DataAccessLayer.Migrations
                 {
                     AnnoucementID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Status = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -78,9 +78,9 @@ namespace DataAccessLayer.Migrations
                 {
                     ServiceID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -93,13 +93,13 @@ namespace DataAccessLayer.Migrations
                 {
                     TeamID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PersonName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Imageurl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FacebookUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    InstagramkUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    WebSiteUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TwitterkUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PersonName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Imageurl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FacebookUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InstagramkUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WebSiteUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TwitterkUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

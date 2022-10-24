@@ -1,0 +1,20 @@
+﻿@using EntityLayer.Concrete
+@model  List<Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>YEni hizmet listesi </h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <td>@item.ServiceID</td>
+                <td>@item.Title</td>
+            }
+</table>
+<a href="/Test/AddService" class="btn btn-outline-info">Yeni Hizmet Girişi</a>

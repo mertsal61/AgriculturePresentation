@@ -14,6 +14,7 @@ namespace DataAccessLayer.Concrete.Repository
         {
             using var contex = new AgricultureContext();
             contex.Remove(t);
+            contex.SaveChanges();   
         }
 
         public List<T> GetAll()
@@ -32,12 +33,14 @@ namespace DataAccessLayer.Concrete.Repository
         {
             using var contex = new AgricultureContext();
             contex.Add(t);
+            contex.SaveChanges();
         }
 
         public void Update(T t)
         {
             using var contex = new AgricultureContext();
             contex.Update(t);
+            contex.SaveChanges();
         }
     }
 }
