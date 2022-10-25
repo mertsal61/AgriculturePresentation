@@ -25,25 +25,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(var item in Model)
+                        @foreach (var item in Model)
                         {
 
 
-                        <tr>
-                            <td class="py-1">
-                                <img src="~MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/faces/face1.jpg" alt="image" />
-                            </td>
-                            <td>@item.TeamID</td>
-                            <td>@item.PersonName</td>
-                            <td>@item.Title</td>
-                            <td><a href="/Team/DeleteTeam/@item.TeamID" class="btn btn-outline-danger">Sil</a></td>
-                            <td><a href="/Team/EditTeam/@item.TeamID" class="btn btn-outline-success">Düzenle</a></td>
-                        </tr>
+                            <tr>
+                                <td class="py-1">
+                                    <img src="~MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/faces/face1.jpg" alt="image" />
+                                </td>
+                                <td>@item.TeamID</td>
+                                <td>@item.PersonName</td>
+                                <td>@item.Title</td>
+                                <td><a href="/Team/DeleteTeam/@item.TeamID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Team/EditTeam/@item.TeamID" class="btn btn-outline-success">Düzenle</a></td>
+                            </tr>
                         }
                     </tbody>
                 </table>
-                <a href="/Team/AddTeam"class="btn btn-outline-info">Yeni Kişi Girişi</a>
+                <br/>
             </div>
+            <a href="/Team/AddTeam" class="btn btn-outline-info">Yeni Kişi Girişi</a>
         </div>
     </div>
 </div>

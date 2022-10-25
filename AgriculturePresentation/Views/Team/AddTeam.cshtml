@@ -9,20 +9,40 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <form class="forms-sample">
+            <h4 class="card-title">Yeni Takım Arkadaşı Kaydı</h4>
+            <form class="forms-sample" method="post">
                 <div class="form-group">
-                    <label for="exampleInputName1">Başlık</label>
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                    <label for="exampleInputName1">Adı Soyadı</label>
+                    <span asp-validation-for="PersonName" class="=text-danger"></span>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="adsoyad" asp-for="PersonName">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail3">Görsel</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                    <label for="exampleInputEmail3">Görev</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="görev" asp-for="Title">
                 </div>
                 <div class="form-group">
-                    <label for="exampleTextarea1">Açıklama</label>
-                    <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                    <label for="exampleInputEmail3">Görsel Yolu</label>
+                    <span asp-validation-for="Imageurl" class="text-danger"></span>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="görsel yolu" asp-for="Imageurl">
                 </div>
-                <button type="submit" class="btn btn-outline-info>KAYDET</button>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Facebook</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Facebook Linkini Giriniz" asp-for="FacebookUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Instagram</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Instagram Linkini Giriniz" asp-for="InstagramkUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Twitter</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Twitter Linkini Giriniz" asp-for="TwitterkUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Web Sitesi</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Varsa Web Site Linki Ekleyin" asp-for="WebSiteUrl">
+                </div>
+                <button type="submit" class="btn btn-outline-info">KAYDET</button>
                 <button class="btn btn-light">VAZGEÇ</button>
             </form>
         </div>

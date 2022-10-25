@@ -14,11 +14,11 @@ namespace DataAccessLayer.Contexts
         {
             optionsBuilder.UseSqlServer("server=MERT\\SQLEXPRESS;database=DbAgriculture;integrated security=true");
         }
-        public DbSet<Adress>? adresses { get; set; }
-        public DbSet<Contact>? contacts { get; set; }
-        public DbSet<Image>? Images { get; set; }
-        public DbSet<Annoucement>? annoucements { get; set; }
-        public DbSet<Service>? services { get; set; }
-        public DbSet<Team>? teams { get; set; }
+        public DbSet<Adress> adresses { get; set; }
+        public DbSet<Contact> contacts { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Annoucement> annoucements { get; set; }
+        public DbSet<Service> services { get; set; }
+        public DbSet<Team> teams { get; set; }
     }
 }

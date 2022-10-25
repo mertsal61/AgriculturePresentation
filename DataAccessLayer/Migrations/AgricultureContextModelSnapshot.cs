@@ -52,7 +52,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("AdressID");
 
-                    b.ToTable("adresses");
+                    b.ToTable("adresses", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Annoucement", b =>
@@ -79,7 +79,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("AnnoucementID");
 
-                    b.ToTable("annoucements");
+                    b.ToTable("annoucements", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>
@@ -107,7 +107,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ContactID");
 
-                    b.ToTable("contacts");
+                    b.ToTable("contacts", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Image", b =>
@@ -128,7 +128,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ImageID");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Service", b =>
@@ -153,7 +153,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("ServiceID");
 
-                    b.ToTable("services");
+                    b.ToTable("services", (string)null);
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Team", b =>
@@ -194,7 +194,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("TeamID");
 
-                    b.ToTable("teams");
+                    b.ToTable("teams", (string)null);
                 });
 #pragma warning restore 612, 618
         }

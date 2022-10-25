@@ -1,6 +1,9 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AgriculturePresentation.Controllers
 {
@@ -26,8 +29,25 @@ namespace AgriculturePresentation.Controllers
         [HttpPost]
         public IActionResult AddTeam(Team team)
         {
-            _teamService.Insert(team);
-            return RedirectToAction("Index" );
+            TeamValidator validationRules = new TeamValidator();
+
+            ValidationResult result = validationRules.Validate(team); 
+            if(result.IsValid)
+            {
+                _teamService.Insert(team);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach(var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View();
+            }
+
+            
+            
         }
     }
 }
